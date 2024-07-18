@@ -653,7 +653,7 @@ test('should not hang and report results when worker process suddenly exits duri
   const result = await runInlineTest({
     'a.spec.js': `
       import { test, expect } from '@playwright/test';
-      test('failing due to afterall', () => {});
+      test('failing due to afterAll', () => {});
       test.afterAll(() => { process.exit(0); });
     `
   }, { reporter: 'line' });
